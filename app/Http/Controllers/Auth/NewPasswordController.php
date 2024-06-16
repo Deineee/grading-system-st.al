@@ -34,8 +34,10 @@ class NewPasswordController extends Controller
 
         $request->validate([
             'token' => ['required'],
-            'email' => [ 'required_without:username', 'email', 'exists:user,email'],
-            'username' => [ 'required_without:email', 'string', 'exists:user,username'],
+            /*'email' => [ 'required_without:username', 'email', 'exists:user,email'],
+            'username' => [ 'required_without:email', 'string', 'exists:user,username'],*/
+            'email' => [ 'sometimes','required', 'email', 'exists:users,email'],
+            'username' => [ 'sometimes','required', 'string', 'exists:users,username'],  
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
