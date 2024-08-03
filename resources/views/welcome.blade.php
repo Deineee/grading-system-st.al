@@ -7,50 +7,7 @@
     <title>{{ config('app.name', 'Grading-System') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
-    <style>
-        body {
-            background-image: url('{{ asset('image/background.jpg') }}');
-            background-size: cover;
-            background-position: center;
-            height: 100vh; /* Ensure full viewport height */
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Align items to the top of the flex container */
-            font-family: 'Nunito', sans-serif; /* Change font to default Laravel font */
-        }
-
-        .content {
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 10vh; /* Margin from the top of the viewport */
-        }
-
-        /* Style for buttons */
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            text-decoration: none; 
-            margin: 10px; 
-        }
-
-        .btn-blue {
-            background-color: #3490dc;
-            color: #fff;
-        }
-
-        .btn-blue:hover {
-            background-color: #2779bd;
-        }
-    </style>
+    <link href="{{ asset('../resources/css/welcome.css') }}" rel="stylesheet">
 
     <link rel="icon" type="image/x-icon" href="{{ asset('st.al-logo.ico') }}">
 </head>
