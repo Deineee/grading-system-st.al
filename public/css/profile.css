@@ -1,0 +1,49 @@
+
+.main-content-inner-profile {
+    margin-left: 5rem;
+    margin-right: 5rem; 
+    height: 100vh; 
+    flex: 1; 
+    padding: 20px;
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container-profile {
+    padding: 20px;
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 1rem;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.main-content-inner-profile::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar in Firefox */
+.main-content-inner-profile {
+    scrollbar-width: none; /* Hide scrollbar */
+}
+
+/* Hide scrollbar in Edge and IE */
+.main-content-inner-profile {
+    -ms-overflow-style: none; /* Hide scrollbar */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-content-profile {
+        margin-left: 0; 
+    }
+    
+    .main-content-inner-profile {
+        padding: 10px; 
+    }
+    
+    .form-container-profile {
+        margin-bottom: 0.5rem; 
+    }
+}

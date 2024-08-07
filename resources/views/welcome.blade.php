@@ -4,11 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config('app.name', 'Grading-System') }}</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('../resources/css/welcome.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{ asset('st.al-logo.ico') }}">
 </head>
 <body>
