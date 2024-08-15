@@ -10,10 +10,6 @@
 <body>
     <x-app-layout>
         <div class="flex h-screen overflow-hidden">
-            <!-- Sidebar -->
-            <aside id="sidebar">
-                @include('sidebar.sidebar')
-            </aside>
             <!-- Main Content -->
             <div class="main-content-inner-profile">
                 <div class="form-container-profile">

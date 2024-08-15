@@ -1,0 +1,123 @@
+/* Dropdown Container */
+.dropdown-group {
+    display: flex;
+    gap: 25px; 
+    margin-left: auto; 
+    align-items: center;
+  }
+
+.dropdown-container {
+	display: inline-block;
+	padding: 12px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+	position: relative;
+}
+
+.dropdown[open] summary {
+	background: #ffffff10;
+}
+
+.dropdown summary {
+	list-style: none;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.dropdown summary.avatar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0;
+}
+
+.dropdown.right ul {
+	right: 0;
+}
+
+.dropdown ul {
+	padding: 0;
+	margin: 0;
+	box-shadow: 0 0 10px #00000030;
+	min-width: max-content;
+	position: absolute;
+	top: 100%;
+	border-radius: 10px;
+	background-color: #fff;
+	z-index: 2;
+}
+
+.dropdown ul li {
+	list-style-type: none;
+	display: block;
+}
+
+.dropdown ul li:first-of-type {
+	border: none;
+	background-color: #f2f2f2;
+	border-radius: 10px 10px 0 0;
+}
+
+.dropdown ul li:last-of-type {
+	border-radius: 0 0 10px 10px;
+}
+
+.dropdown ul li p {
+	padding: 10px 15px;
+	margin: 0;
+}
+
+.dropdown ul li a {
+	display: flex;
+	align-items: center;
+	padding: 10px 15px;
+	text-decoration: none;
+	color: #333;
+}
+
+.dropdown ul li a:hover {
+	color: #ff34b2;
+}
+
+.dropdown ul li.divider {
+	border-bottom: 1px solid #333;
+}
+
+/* General Styles */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	padding: 60px 0;
+	margin: 0;
+	font-size: 13pt;
+}
+
+a {
+	text-decoration: none;
+	color: #ff34b2;
+	cursor: pointer;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.navbar-brand {
+    margin-right: auto;
+  }
+
+/* Navbar Styles */
+.navbar {
+    border-bottom: 2px solid #0e2238;
+}

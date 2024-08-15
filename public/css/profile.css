@@ -18,6 +18,18 @@
     margin-bottom: 1rem;
 }
 
+#sidebar {
+    width: 260px;
+    min-width: 260px;
+    height:  90vh;
+    z-index: 1000;
+    background-color: #0e2238;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; 
+    top: 75px;
+}
+
 /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
 .main-content-inner-profile::-webkit-scrollbar {
     display: none;

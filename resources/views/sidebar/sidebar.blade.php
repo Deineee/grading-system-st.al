@@ -75,22 +75,7 @@
                         <span>Notification</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a href="{{route('profile.edit')}}" class="sidebar-link">
-                        <i class="lni lni-user"></i>
-                        <span>Profile</span>
-                    </a>
-                </li>
             </ul>
-            <div class="sidebar-footer">
-                <a href="{{ route('logout') }}" class="sidebar-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <i class="lni lni-exit"></i>
-                    <span>Logout</span>
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </div>
         </aside>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

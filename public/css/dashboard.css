@@ -1,25 +1,33 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow: hidden; 
 }
+
+#nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
 #sidebar {
     position: fixed;
-    top: 0;
     left: 0;
 }
+
 .wrapper {
     display: flex;
     flex-direction: column;
     margin-left: 255px;
     min-height: 100vh;
+    padding-top: 10px; 
 }
-.navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
+
 .main-content {
-    margin-top: 15px; /* Space for the navbar */
-    padding: 20px;
+    padding: 30px;
+    margin-top: 20px;
     flex: 1;
+    overflow-y: auto; 
+    height: calc(100vh - 76px); 
 }

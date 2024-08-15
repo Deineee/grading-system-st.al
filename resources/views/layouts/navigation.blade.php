@@ -1,36 +1,81 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<link href="{{ asset('css/navigation.css') }}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+    <!-- Combine Notification and Profile dropdown containers -->
+    <div class="dropdown-group">
+      <div class="dropdown-container">
+        <details class="dropdown right">
+          <summary class="with-down-arrow">
+            <span class="material-symbols-outlined">notifications</span>
+          </summary>
+          <ul>
+            <li>
+              <a href="#">
+                <span class="material-symbols-outlined">info</span> Notification 1
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-outlined">info</span> Notification 2
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-outlined">info</span> See All Notifications
+              </a>
+            </li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+        </details>
+      </div>
+
+      <div class="dropdown-container">
+        <details class="dropdown right">
+          <summary class="avatar">
+            <img src="https://gravatar.com/avatar/00000000000000000000000000000000?d=mp">
+          </summary>
+          <ul>
+            <li>
+              <p>
+                <span class="block bold">Jane Doe</span>
+                <span class="block italic">jane@example.com</span>
+              </p>
+            </li>
+            <li>
+              <a href="{{ route('profile.edit') }}">
+                <span class="material-symbols-outlined">account_circle</span> Account
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-outlined">settings</span> Settings
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-outlined">help</span> Help
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
+
+              <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <span class="material-symbols-outlined">logout</span> Logout
+              </a>
+            </li>
+          </ul>
+        </details>
+      </div>
     </div>
   </div>
 </nav>
+
+<script src="{{ asset('js/navigation.js') }}"></script>
+
