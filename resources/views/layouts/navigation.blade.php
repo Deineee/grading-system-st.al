@@ -1,3 +1,4 @@
+{{-- css links --}}
 <link href="{{ asset('css/navigation.css') }}" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
@@ -5,12 +6,14 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
 
-    <!-- Combine Notification and Profile dropdown containers -->
+    {{-- Combine Notification and Profile dropdown containers --}}
     <div class="dropdown-group">
-      <div class="dropdown-container">
+      <div class="dropdown-container-notification">
         <details class="dropdown right">
           <summary class="with-down-arrow">
-            <span class="material-symbols-outlined">notifications</span>
+          <span class="material-symbols-outlined " style="font-size: 28px;">
+          notifications
+          </span>
           </summary>
           <ul>
             <li>
@@ -41,8 +44,8 @@
           <ul>
             <li>
               <p>
-                <span class="block bold">Jane Doe</span>
-                <span class="block italic">jane@example.com</span>
+                <span class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</span>
+                <span class="block italic">{{ Auth::user()->email }}</span>
               </p>
             </li>
             <li>
@@ -77,5 +80,6 @@
   </div>
 </nav>
 
+{{-- JavaScript --}}
 <script src="{{ asset('js/navigation.js') }}"></script>
 

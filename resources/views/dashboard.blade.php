@@ -18,7 +18,6 @@
             </div>
             <div class="main-content">
                 <p>This is the dashboard</p>
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                 @component('components.application-logo')
                 @endcomponent
             </div>
